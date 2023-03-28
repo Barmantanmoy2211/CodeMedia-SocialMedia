@@ -1,0 +1,21 @@
+@import "./constants";
+@import "./variables";
+
+.share__container{
+    background: var(--primary-color);
+    padding: $sm-gap;
+    border-radius: 10px;
+    border: var(--border);
+    @include flexDirection(column);
+    gap: $gap;
+
+    .share__top{
+        @include flexAlign;
+        gap: $sm-gap;
+        width: 100%;
+
+        img{
+            @include userProfile;
+        }
+    }
+}
