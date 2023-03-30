@@ -25,5 +25,10 @@
 
             }
         }
+
+        .home__feedsidebar{
+            @include flexDirection(column);
+            gap: $gap;    
+        }
     }
 }
