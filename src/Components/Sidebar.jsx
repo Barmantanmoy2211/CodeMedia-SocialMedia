@@ -4,13 +4,15 @@ import {BiMoon, BiSearch, BiSun} from "react-icons/bi"
 import {sidebarRoutes} from "../Constants/dummy"
 import {Link, NavLink} from "react-router-dom" 
 import { useDispatch, useSelector } from "react-redux";
+import { toogleTheme } from "../redux/theme";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
 
-  const theme = "dark"
-  const handleChangeTheme = () =>{
-
-  }
+  const theme = useSelector((state) => state.theme);
+  const handleChangeTheme = () => {
+    dispatch(toogleTheme());
+  };
 
   return (
   <div className="app__sidebar">
